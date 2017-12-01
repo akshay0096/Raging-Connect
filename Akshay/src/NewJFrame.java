@@ -136,6 +136,8 @@ public class NewJFrame extends javax.swing.JFrame {
             Socket s=new Socket(jTextField1.getText(),7962);
             System.out.println("Success");
             s.close();
+            jPanel1.setVisible(false);
+            NewJPanel p1=new NewJPanel();
         }catch(Exception err){System.out.println(err);}
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -149,8 +151,6 @@ public class NewJFrame extends javax.swing.JFrame {
         System.out.println("Success");
         ss.close();
         }catch(Exception err){System.out.println(err);}
-        //Thread t1=new Thread("Countdown");
-        //t1.start();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
