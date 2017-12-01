@@ -10,7 +10,7 @@
  */
 import java.net.*;
 
-public class NewJFrame extends javax.swing.JFrame implements Runnable {
+public class NewJFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
@@ -133,19 +133,12 @@ public class NewJFrame extends javax.swing.JFrame implements Runnable {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         try{
-            Socket s=new Socket("localhost",7962);
+            Socket s=new Socket(jTextField1.getText(),7962);
             System.out.println("Success");
             s.close();
         }catch(Exception err){System.out.println(err);}
     }//GEN-LAST:event_jButton2ActionPerformed
-    public void run()
-    {
-        try{
-        Thread.sleep(1000);
-        for(int i=5;i>=0;i--)
-        jLabel2.setText(i+"");
-        }catch(Exception err){System.out.println(err);}
-    }
+
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
